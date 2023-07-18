@@ -12,4 +12,4 @@ Cenário: Login
 Cenário: Logar com senha incorreta
     Conectar com autenticação básica na API
     Logar com senha incorreta
-    Validar status code    ${STATUS_400}
+    Validar status code    ${STATUS_401}

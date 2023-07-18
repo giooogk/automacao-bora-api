@@ -34,6 +34,6 @@ Criar usuário com caracteres especiais
 
     @{authorities}    Create List    ${type_authorities}
     ${num}    Generate random string    4    abcdefghijklmnopqrstuvxz
-    ${body}    Create Dictionary    login=robot${num}   name=#4.%&robot${num}    email=robot${num}@email.com    telefone=5584999999999    authorities=${authorities}   password=1234
-    ${response}    POST On Session    api    url=${CREATE_USER_URI}    json=${body}
+    ${body}    Create Dictionary    login=#4.%&robot${num}   name=#4.%&robot${num}    email=robot${num}@email.com    telefone=5584999999999    authorities=${authorities}   password=1234
+    ${response}    POST On Session    api    url=${CREATE_USER_URI}    json=${body}    expected_status=ANY
     Set Suite Variable    ${response}    ${response.status_code}

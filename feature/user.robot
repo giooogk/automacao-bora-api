@@ -21,4 +21,4 @@ Cenário: Criar usuário
 Cenário: Criar usuário com caracteres especiais
     Conectar com autenticação básica na API
     Criar usuário com caracteres especiais    ROLE_GENERAL_USER
-    Validar status code    ${STATUS_401}
+    Validar status code    ${STATUS_400}
