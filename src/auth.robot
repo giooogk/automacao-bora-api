@@ -8,3 +8,9 @@ Autenticar
     ${response}    POST On Session    alias=api    url=${AUTH_URI}   json=${body}
     # Log To Console    ${response.json()}
     Set Suite Variable    ${response}    ${response.status_code}
+
+Logar com senha incorreta
+    ${body}    Create Dictionary    email=admin    password=skjsd
+    ${response}    POST On Session    alias=api    url=${AUTH_URI}   json=${body}    expected_status=ANY
+    # Log To Console    ${response.json()}
+    Set Suite Variable    ${response}    ${response.status_code}
