@@ -11,3 +11,5 @@ ${TICKETS_URI}          /api/tickets
 ${LOCATION_URI}         /api/locations
 ${STATUS_200}           ${200}
 ${STATUS_201}           ${201}
+${STATUS_400}           ${400}
+${STATUS_401}           ${401}
